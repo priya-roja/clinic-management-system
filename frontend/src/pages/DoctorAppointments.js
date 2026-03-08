@@ -7,6 +7,7 @@ import { CalendarDaysIcon, ClockIcon } from "@heroicons/react/24/outline";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { useEffect, useState, useCallback } from "react";
+import API from "../services/api";
 
 const BASE_URL = "https://clinic-backend-d1b4.onrender.com/api";
 
@@ -36,14 +37,9 @@ function DoctorAppointments() {
 
     try {
 
-      const res = await axios.get(
-        `${BASE_URL}/doctor/appointments/`,
-        {
-          headers: {
-            Authorization: `Token ${token}`
-          }
-        }
-      );
+      const res = await API.get(
+        "/doctor/appointments/");
+      
 
       setAppointments(res.data);
 
@@ -57,7 +53,7 @@ function DoctorAppointments() {
 
     }
 
-  }, [token]);
+  }, []);
 
   useEffect(() => {
     fetchAppointments();
