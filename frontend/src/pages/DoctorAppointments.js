@@ -37,7 +37,7 @@ function DoctorAppointments() {
     try {
 
       const res = await axios.get(
-        `${BASE_URL}/api/doctor/appointments/`,
+        `${BASE_URL}/doctor/appointments/`,
         {
           headers: {
             Authorization: `Token ${token}`
@@ -72,7 +72,7 @@ function DoctorAppointments() {
     try {
 
       await axios.patch(
-        `${BASE_URL}/api/doctor/appointments/${id}/`,
+        `${BASE_URL}/doctor/appointments/${id}/`,
         { status },
         {
           headers: {
