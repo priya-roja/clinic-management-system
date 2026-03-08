@@ -21,7 +21,7 @@ function Register() {
 
     try {
 
-     await axios.post(`${BASE_URL}/api/register/`, {
+     await axios.post(`${BASE_URL}/register/`, {
   username: username,
   email: email,
   password: password,
