@@ -3,7 +3,7 @@ import API from "../services/api";
 import toast from "react-hot-toast";
 import Layout from "../components/Layout";
 
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://clinic-backend-d1b4.onrender.com/api";
 
 function CreateAppointment() {
 
